@@ -95,7 +95,8 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
                     {repositories[user.id].map((repo: any) => (
                       <div
                         key={repo.id}
-                        className="bg-white border border-gray-200 rounded-md p-3 mb-2 shadow-sm"
+                        className="bg-white border border-gray-200 rounded-md p-3 mb-2 shadow-sm cursor-pointer hover:bg-gray-50 transition-colors"
+                        onClick={() => window.open(repo.html_url, "_blank")}
                       >
                         <h3 className="text-lg font-semibold text-gray-800 mb-1">
                           {repo.name}
